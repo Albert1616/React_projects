@@ -1,0 +1,14 @@
+.button{
+    margin-top: 3.5em;
+}
+.button_component{
+    background-color: #8257e5;
+    padding: 1.3em;
+    width: 13em;
+    border-radius: 14px;
+    text-decoration: none;
+    color: white;
+}
+.button_component:hover{
+    background-color: #7641f1;
+}

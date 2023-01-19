@@ -1,0 +1,21 @@
+.form{
+    margin: 1em 0;
+    width: 30em;
+    border: 1px solid #a889f0;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.input_check{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.input_check label{
+    padding: 1em;
+}
+#check{
+    border-radius: 400px;
+}
+.form .data{
+    text-decoration: none;
+}

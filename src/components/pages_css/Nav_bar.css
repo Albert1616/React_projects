@@ -1,0 +1,28 @@
+.Nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 5.5em;
+    border-bottom: 1px solid #2c2c31;
+}
+.Nav .item{
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #776d8f;
+    height: 100%;
+}
+.Nav .item:hover{
+    color: #b0a6c4;
+}
+.logo, .user{
+    font-size: 2.5em;
+    margin-left: .3em;
+    color: #8257e5;
+}
+.user{
+    font-size: 2.3em;
+    margin-right: .3em;
+    color: #8257e5;
+}

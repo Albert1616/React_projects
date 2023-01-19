@@ -1,0 +1,12 @@
+.container{
+    width: 1200px;
+    display: flex;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.min-heigth{
+   height: 75%;
+}

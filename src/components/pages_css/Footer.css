@@ -1,0 +1,51 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-top: 1px solid #2c2c31;
+    height: 8em;
+
+}
+.social{
+    margin: 8px 12px 0;
+}
+.footer h3{
+    text-align: center;
+    font-size: 25px;
+}
+.social_icons{
+    margin: 4px 3px 0;
+}
+.icon_social{
+    font-size: 1.7em;
+    margin:5px 8px 0;
+    color:#8257e5;
+}
+.icon_social:hover{
+    color:#491faa;
+}
+.txt_footer{
+    margin: 8px 12px 0;
+}
+.pay_icons{
+    font-size: 1.7em;
+    margin:5px 8px 0;
+    color:#8257e5;
+}
+.pay_icons:hover{
+    color:#491faa;
+}
+.copyright{
+    text-align: center;
+    border-top: 1px solid #2c2c31;
+    color: white;
+    height: 2em;
+}
+.copyright p{
+    margin-top: 5px;
+}
+.copyright .icon_copy{
+    color: white;
+    font-size: .9em;
+}

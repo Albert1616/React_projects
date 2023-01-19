@@ -1,0 +1,10 @@
+.newgame{
+    margin: 0 auto;
+}
+.newgame h1{
+    margin-top: 2em;
+    font-weight: bold;
+}
+.newgame p{
+    margin-top: 7px;
+}

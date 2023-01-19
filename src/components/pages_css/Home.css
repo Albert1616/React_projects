@@ -1,0 +1,18 @@
+.img_player img{
+    width: 27em;
+    height: 27em;
+}
+.home_content{
+    margin: 4em auto;
+    display: flex;
+    justify-content: space-between;
+}
+.txt_home{
+    margin-top:4em;
+}
+.txt_home .txt_button{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
