@@ -1,21 +1,36 @@
+.content_form{
+    height: 75%;
+}
 .form{
     margin: 1em 0;
-    width: 30em;
+    width: 40em;
+    height: 60%;
     border: 1px solid #a889f0;
     border-radius: 8px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 20px;
+}
+.checks,.dados{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
 }
 .input_check{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.input_check label{
-    padding: 1em;
-}
 #check{
-    border-radius: 400px;
+    margin-left: 2px;
 }
 .form .data{
     text-decoration: none;
+}
+.buttons_form{
+    display: flex;
+}
+.content_text{
+    display: grid;
 }

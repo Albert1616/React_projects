@@ -1,0 +1,12 @@
+.text{
+    max-height: 4em;
+    max-width: 17em;
+    min-width: 17em;
+    border: 1px solid #8257e5;
+    outline: 0;
+    background-color: transparent;
+}
+.content_text label{
+    font-size: 17px;
+    font-weight: 600;
+}

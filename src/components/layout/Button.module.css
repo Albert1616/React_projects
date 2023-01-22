@@ -1,0 +1,32 @@
+.button{
+    margin-top: 3.5em;
+}
+.button_component{
+    background-color: #8257e5;
+    padding: 1.3em;
+    width: 13em;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+}
+.button_component:hover{
+    background-color: #6f37f0;
+}
+.button_nomargin{
+    margin-top: 0;
+}
+.button_form{
+    padding: .7em;
+    width: 10em;
+    display: block;
+}
+.button_form_cancel{
+    padding: .7em;
+    width: 10em;
+    display: block;
+    background-color: #61173C;
+    margin-left: .8em;
+}
+.button_form_cancel:hover{
+    background-color: #a02060;
+}

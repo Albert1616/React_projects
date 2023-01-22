@@ -1,0 +1,17 @@
+{
+  "teste":[],
+  "opcoes":[
+      {
+          "id":1,
+          "name": "Não iniciado"
+      },
+      {
+          "id":2,
+          "name": "Em andamento"
+      },
+      {
+          "id":3,
+          "name": "Finalizado"
+      }
+  ]
+}

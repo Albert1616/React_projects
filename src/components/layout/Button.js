@@ -1,10 +1,10 @@
 import {Link} from 'react-router-dom';
-import '../layout/Button.css';
+import Style from '../layout/Button.module.css';
 
 function Button(props){
     return (
-        <div className='button'>
-            <Link to={props.adress} className='button_component'>{props.txt}</Link>
+        <div className={`${Style.button} ${Style[props.customClass]}`}>
+            <Link to={props.adress} className={`${Style.button_component} ${Style[props.buttonClass]}`}>{props.txt}</Link>
         </div>
     )
 }
