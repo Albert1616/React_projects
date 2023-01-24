@@ -1,17 +1,69 @@
 {
-  "teste":[],
-  "opcoes":[
-      {
-          "id":1,
-          "name": "Não iniciado"
+  "games": [
+    {
+      "status": {
+        "id": "Em andamento",
+        "name": "Em andamento"
       },
-      {
-          "id":2,
-          "name": "Em andamento"
+      "name": "dcd",
+      "data": "202020",
+      "description": "gertgtrg",
+      "URL": {
+        "Id": "url_capa",
+        "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAA7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAQaSURBVFiF7VZtSJ1lGL7u9/X4PWETw5aeo3b8VRvRoPVnStRg0UYjGKsgiC10WhHLltKni6XN1awRs9o5GQT9q6iBS2guIxgtgkajoLb0nNOE6aZpfp2jz33143x0fH095vqxP15/Xp77ve/7uu/r+QRWsYobDHEzdm4IVRmgnirbDFEBokgJkFAlhpU4C7L71Yu+k+lxL1RGNs4bbSBxL4lblBAAlwxxyhh2vXulYiBjAQSlc0O4VSktJLITpEj/LrCpfjVn5NFcS2dmKW+R0qCELIpRgERMlYeOX/UdAoRJTmsheaRbKa+QsJXoFqBGNK8oVpBVYFTuNpRjJKLx5IRCtlkWRmdpzZDSqESMxDEDa/MkPQWe2EwRILVKfKSETchrdcWRgKsCRzdGDqiyg8SEkg81/+I77TY9rdV/3jFvzMckbnd0egGqjx25XPmTW1z9utBWCD4lscZAng2OejtTBXTcNlBqif07iQKqbH/+1/IetyT/F/VrQzsM8CWJv2XOVAemqq5YAGCLvZdEoSE/c5IfrA73t/rD/Ssle+qm0OmGkvCZdNv7Y76ToHyuxBqTZe8BEmvAANuVAGAFnYlI1ChRs9IClMgmaRblUw2SgFE8AABZcSP8JJBl7B+Sjgerw/0JcpDEi5UhUvFdW8i3JRPxkyWhPgKe4yNxv7q1oT4DeIJj8bFqzjmVGEhUpxQgUawEmn67+Vpa50it9uRCE9CNdEHnECExmz6WtHH3ZOnVRO6SlALJvStp+7P1orcWQLxzAm2DPtdDy4muEe896Z0HxrwOxYTKEEhKqoBkt64dUb7hsn27xEFEyFm3f0lVUwVohgLaB+MdrRSBsaXj0vmspOF6urxepPMtOwXp2F8W8RujXVRsIZGz4F4AomrwrUVp+GDceylTHrorkLmCxpLhQjXaS8V9i8jjF04Oga1zYG9jyXDhf1UgsQ25rAIez/RhVVQ5bzoSA5ZYZTRWMYkfSdw6GZ0+vFIFoiTQukTlT5dGatXIPhdyquET710rvxycKB8VI48rEaPKvkcKI7UrUABDSmCqYMrvdK5bP5QPaoCE5fI+OBEYr+hL+gYnvRdIvK6EJWoCOzCU78y3C5F1idjRfxVQ9JMA1NrjDMg1c20k/C7kkRmJHXD6502OtCt5Xgl/Xl603fk/Zs3vSuT4GUhcxy3e0CZDfJ9I/LId0+45ihhbniHR7EJOMXL/iQlvr5vEu/MH76TiLOMXUkcsy37Hnraias0/rMCbJHKV3NmDyi9Sx+tzZaFmJd5wPKOccw4lSEVLcNzX4Uaekjp7YLdCPlli6o72oKIppUAS+9eHHzRkExWbSOQ7Av8icc4ojnw47vs6E3kSOz1/3AXKS6RsVsImcd5Q3j6FhY/ZVazihuIfwZsCLKvBr0wAAAAASUVORK5CYII="
       },
-      {
-          "id":3,
-          "name": "Finalizado"
-      }
+      "plataforma": {
+        "nome": "Playstation"
+      },
+      "id": 1
+    },
+    {
+      "name": "dxd",
+      "data": "2002",
+      "status": {
+        "id": "Em andamento",
+        "name": "Em andamento"
+      },
+      "description": "rfrfrf",
+      "URL": {
+        "Id": "url_capa",
+        "url": ""
+      },
+      "plataforma": {
+        "nome": "Playstation"
+      },
+      "id": 2
+    },
+    {
+      "name": "deded",
+      "data": "2002",
+      "status": {
+        "id": "Não iniciado",
+        "name": "Não iniciado"
+      },
+      "description": "frfrf",
+      "URL": {
+        "Id": "url_capa",
+        "url": " "
+      },
+      "plataforma": {
+        "nome": "Playstation"
+      },
+      "id": 3
+    }
+  ],
+  "opcoes": [
+    {
+      "id": 1,
+      "name": "Não iniciado"
+    },
+    {
+      "id": 2,
+      "name": "Em andamento"
+    },
+    {
+      "id": 3,
+      "name": "Finalizado"
+    }
   ]
 }

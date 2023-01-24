@@ -22,7 +22,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-#check{
+#plataform{
     margin-left: 2px;
 }
 .form .data{

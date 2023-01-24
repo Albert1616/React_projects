@@ -6,7 +6,11 @@
     text-align: center;
     flex-wrap: wrap;
 }
+.games_container{
+    justify-content: space-between;
+    margin-top: 1em;
 
+}
 .min-heigth{
    height: 80%;     
 }

@@ -5,11 +5,13 @@ import Textarea from "../Form/Textarea";
 import SelectInput from "../Form/SelectInput";
 import Button from '../layout/Button';
 import '../layout/FormGame.css';
+
 import {FaPlaystation, FaXbox,FaSteam} from 'react-icons/fa';
 import {SiNintendoswitch} from 'react-icons/si';
 
-function FormGame(){
+function FormGame({create, dataProject}){
     const [op,Setop] = useState([]);
+    const [project, Setproject] = useState(dataProject || {});
 
     useEffect(() => {
         fetch("http://localhost:5000/opcoes",{
@@ -24,29 +26,67 @@ function FormGame(){
         
     },[]);
 
+    const submit = (e) =>{
+        create(project);
+    }
+
+    function handleChange(e){
+        Setproject({...project,[e.target.name]: e.target.value});
+    }
+
+    function handleOptionChange(e){
+        Setproject({...project, status:{
+            id:e.target.value,
+            name: e.target.options[e.target.selectedIndex].text,
+        },
+    })
+    }
+ 
+    function handleImageChange(e){
+        const files = e.target.files;
+
+        const read = new FileReader();
+        read.readAsDataURL(files[0]);
+        read.onload = function(){
+            Setproject({...project,URL:{
+                Id: e.target.name,
+                url: read.result
+            }});
+        }
+    }
+
+    function handlePlataformChange(e){
+        Setproject({...project,plataforma:{
+            nome:e.target.value
+        }})
+    }
     return (
         <div className="content_form">
             <form className='form'>
             <div className="dados">
-                <Input type='text' text_label='Nome' id='name'/>
-                <Input type='number' text_label='Data de lançamento' id='data'/>
-                <SelectInput text_label='Status: ' id='status' options={op}/>
+                <Input type='text' text_label='Nome' name='name' change={handleChange} value={project.name ? project.name:''}/>
+                <Input type='number' text_label='Data de lançamento' name='data' change={handleChange} value={project.data ? project.data:''}/>
+                <SelectInput text_label='Status:' 
+                name='status' options={op} 
+                change={handleOptionChange} 
+                max='5' 
+                value={project.status ? project.status.id:''}/>
                 
             </div>
             <div className="checks">
-                <Textarea text_label='Descrição do game' id='description'></Textarea>
-                <Input type='file' text_label="Capa do game" id='capa' accept='image/jpeg, image/png'/>
+                <Textarea text_label='Descrição do game' name='description' change={handleChange}></Textarea>
+                <Input type='file' text_label="Capa do game" name='url_capa' accept='image/jpeg, image/png' change={handleImageChange} />
                 <div className="input_check">
-                    <Input type='checkbox' text_label={<FaPlaystation/>} id='check'/>
-                    <Input type='checkbox' text_label={<FaXbox/>} id='check'/>
-                    <Input type='checkbox' text_label={<SiNintendoswitch/>} id='check'/>
-                    <Input type='checkbox' text_label={<FaSteam/>} id='check'/>
+                    <Input type='radio' text_label={<FaPlaystation/>} id='check' name='plataform' value='Playstation' change={handlePlataformChange}/>
+                    <Input type='radio' text_label={<FaXbox/>} id='check' name='plataform' change={handlePlataformChange} value='Xbox'/>
+                    <Input type='radio' text_label={<SiNintendoswitch/>} id='check' name='plataform' change={handlePlataformChange} value='Nintendo switch'/>
+                    <Input type='radio' text_label={<FaSteam/>} id='check' name='plataform' change={handlePlataformChange} value='Steam'/>
                 </div>
             </div>
         </form>
             <div className="buttons_form">
-                <Button adress='/my_games' txt='Salvar' customClass='button_nomargin' buttonClass='button_form'/>
-                <Button adress='/my_games' txt='Cancelar' customClass='button_nomargin' buttonClass='button_form_cancel'/>
+                <Button adress='/my_games' txt='Salvar' customClass='button_nomargin' buttonClass='button_form' event={submit}/>
+                <Button adress='/home' txt='Cancelar' customClass='button_nomargin' buttonClass='button_form_cancel'/>
             </div>
         </div>
         
