@@ -5,12 +5,23 @@
     margin: 0 auto;
     text-align: center;
     flex-wrap: wrap;
+    overflow:auto;
+    overflow-x:hidden;
 }
-.games_container{
-    justify-content: space-between;
+.container::-webkit-scrollbar{
+    width: 5px;
+    border: 1px solid #a889f0;
+    border-radius:10px;
+}
+.container::-webkit-scrollbar-thumb{
+    background-color:#a889f0;
+    border: 1px solid transparent;
+    border-radius:10px;
+}
+/* .games_container{
+    justify-content: flex-start;
     margin-top: 1em;
-
-}
+} */
 .min-heigth{
    height: 80%;     
 }

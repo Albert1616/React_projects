@@ -8,8 +8,7 @@ function New_game(){
     const hist = useNavigate();
 
     function createGame(game){
-        game.URL.url = ' '
-
+        
         fetch("http://localhost:5000/games",{
             method:'POST',
             headers:{
@@ -19,7 +18,7 @@ function New_game(){
         }).then((resolve)=>resolve.json())
         .then((data)=>{
             hist('/my_games', {state: {message: "Game adicionado com sucesso!"}});
-        }).catch((err)=>console.log(`Ocorreu algum erro ${err}`));
+        }).catch((err)=>console.log(`Ocorreu algum erro ${err}`)); 
     }
     return (
         <div className="newgame">

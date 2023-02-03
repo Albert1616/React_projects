@@ -13,7 +13,7 @@
     flex-direction: column; 
 }
 .form_control #name, .form_control #data{
-    width: 15em;
+    width: 18em;
 }
 .form_control label{
     font-size: 17px;

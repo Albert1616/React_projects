@@ -1,0 +1,37 @@
+.img_current{
+    width: 27em;
+    height: 18em;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+.form_contentedit{
+    margin: 0 auto;
+}
+.form_edit{
+    margin: 2em auto ;
+    width: 48em;
+    height: 85%;
+    border: 1px solid #a889f0;
+    border-radius: 8px;
+    display: flex;
+    text-align: left;
+    padding: 10px;
+}
+.form_edit input,textarea{
+    font-size: 1em;
+}
+.img_data{
+    width: 70%;
+    height: 100%;
+}
+.new_cover{
+    display: none;
+}
+.project_current_data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.project_current_data input,textarea,select{
+    margin-top: 5px;
+}

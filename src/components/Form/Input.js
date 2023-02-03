@@ -10,8 +10,10 @@ function Input(props){
             name={props.name} 
             onChange={props.change} 
             accept={props.accept}
-            value={props.value}
+            defaultValue={props.value}
             max={props.max}
+            checked = {props.checked}
+            required = {props.required}
             />
         </div>
     )

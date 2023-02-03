@@ -7,11 +7,11 @@ function Textarea(props){
             <textarea 
             id={props.name} 
             name={props.name} 
-            cols="30" rows="1.5" 
+            cols={props.cols} rows={props.rows} 
             maxLength='100' 
             className='text'
             onChange={props.change}
-            value={props.value}
+            defaultValue={props.value}
             ></textarea>
         </div>
     )
