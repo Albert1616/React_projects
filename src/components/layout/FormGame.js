@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useForm } from 'react-hook-form';
+import { useNavigate } from "react-router-dom";
 
 import Input from "../Form/Input";
 import Textarea from "../Form/Textarea";
@@ -15,8 +15,9 @@ import { SiNintendoswitch } from 'react-icons/si';
 function FormGame({ create, dataProject }) {
     const [op, Setop] = useState([]);
     const [project, Setproject] = useState(dataProject || {});
-/*     const { register, handleSubmit, formState: { errors } } = useForm();
- */
+    const hist = useNavigate();
+    /*     const { register, handleSubmit, formState: { errors } } = useForm();
+     */
     useEffect(() => {
         fetch("http://localhost:5000/opcoes", {
             method: "GET",
@@ -34,6 +35,7 @@ function FormGame({ create, dataProject }) {
         e.preventDefault()
         console.log(project)
         create(project);
+        hist('my_games')
     }
 
     function handleChange(e) {
@@ -74,44 +76,45 @@ function FormGame({ create, dataProject }) {
 
     return (
         <div className="content_form">
-            <form className='form' disable>
-                <div className="dados">
-                    <Input type='text' text_label='Nome' name='name' className='name' change={handleChange}
-                        value={project.name ? project.name : ''} /* {...register("name_game", {required:true})} */ />
-                    {/* {errors.name&& 
+            <form className='form' onSubmit={submit}>
+                <div className="form_input">
+                    <div className="dados">
+                        <Input type='text' text_label='Nome' name='name' className='name' change={handleChange}
+                            value={project.name ? project.name : ''} required='true' />
+                        {/* {errors.name&& 
                   <FormMessage txt="Informe o nome do jogo" />
                 } */}
-                    <Input type='number' text_label='Data de lançamento' name='data' change={handleChange}
-                        value={project.data ? project.data : ''} /* {...register("data_game", {required:true})} */ />
-                    {/*                 {errors.data_game&& <FormMessage txt="Informe a data de lançamento"/>}
+                        <Input type='number' text_label='Data de lançamento' name='data' change={handleChange}
+                            value={project.data ? project.data : ''} required='true' mask='99/99/9999'/>
+                        {/*                 {errors.data_game&& <FormMessage txt="Informe a data de lançamento"/>}
  */}                <SelectInput text_label='Status:'
-                        name='status' options={op}
-                        change={handleOptionChange}
-                        max='5'
-                        rows='1.5'
-                        cols='30'
-                        value={project.status ? project.status.id : ''}
-                        /* {...register("status_game", { required: true })} */
-                    />
-                    {/* {errors.status_game && <FormMessage txt="Informe o status do progresso" />} */}
+                            name='status' options={op}
+                            change={handleOptionChange}
+                            max='5'
+                            rows='1.5'
+                            cols='30'
+                            value={project.status ? project.status.id : ''}
+                        />
+                        {/* {errors.status_game && <FormMessage txt="Informe o status do progresso" />} */}
 
-                </div>
-                <div className="checks">
-                    <Textarea text_label='Descrição do game' name='description' change={handleChange} /* {...register("description_game", { required: true })} */></Textarea>
-                    {/*                     {errors.description_game && <FormMessage txt="Informe a descrição do game" />}
- */}                    <Input type='file' text_label="Capa do game" name='url_capa' accept='image/jpeg, image/png' change={handleImageChange} />
-                    <div className="input_check">
-                        <Input type='radio' text_label={<FaPlaystation />} id='check' name='plataform' value='Playstation' change={handlePlataformChange} />
-                        <Input type='radio' text_label={<FaXbox />} id='check' name='plataform' change={handlePlataformChange} value='Xbox' />
-                        <Input type='radio' text_label={<SiNintendoswitch />} id='check' name='plataform' change={handlePlataformChange} value='Nintendo switch' />
-                        <Input type='radio' text_label={<FaSteam />} id='check' name='plataform' change={handlePlataformChange} value='Steam' />
+                    </div>
+                    <div className="checks">
+                        <Textarea text_label='Descrição do game' name='description' change={handleChange} required='true' ></Textarea>
+                        {/*                     {errors.description_game && <FormMessage txt="Informe a descrição do game" />}
+ */}                    <Input type='file' text_label="Capa do game" name='url_capa' accept='image/jpeg, image/png' change={handleImageChange} id="choise_picture"/>
+                        <div className="input_check">
+                            <Input type='radio' text_label={<FaPlaystation />} id='check' name='plataform' value='Playstation' change={handlePlataformChange} required='true' />
+                            <Input type='radio' text_label={<FaXbox />} id='check' name='plataform' change={handlePlataformChange} value='Xbox' required='true' />
+                            <Input type='radio' text_label={<SiNintendoswitch />} id='check' name='plataform' change={handlePlataformChange} value='Nintendo switch' required='true' />
+                            <Input type='radio' text_label={<FaSteam />} id='check' name='plataform' change={handlePlataformChange} value='Steam' required='true' />
+                        </div>
                     </div>
                 </div>
+                <div className="buttons_form">
+                    <Button txt='Salvar' customClass='button_nomargin' buttonClass='button_form' submit='true'/>
+                    <Button adress='/home' txt='Cancelar' customClass='button_nomargin' buttonClass='button_form_cancel' />
+                </div>
             </form>
-            <div className="buttons_form">
-                <Button adress='/my_games' txt='Salvar' customClass='button_nomargin' buttonClass='button_form' event={submit} />
-                <Button adress='/home' txt='Cancelar' customClass='button_nomargin' buttonClass='button_form_cancel' />
-            </div>
         </div>
 
     )

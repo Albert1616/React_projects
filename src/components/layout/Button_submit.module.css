@@ -19,16 +19,13 @@
     padding: .7em;
     width: 10em;
     display: block;
-    font-size: 1em;
 }
 .button_form_cancel{
-    padding: .73em;
+    padding: .7em;
     width: 10em;
     display: block;
     background-color: #61173C;
     margin-left: .8em;
-    text-align: center;
-    font-size: 1em;
 }
 .button_form_cancel:hover{
     background-color: #a02060;
